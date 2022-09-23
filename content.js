@@ -38,7 +38,7 @@ function sendRequest(question) {
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", "https://api.openai.com/v1/completions");
 	xhr.setRequestHeader("Content-Type", "application/json");
-	xhr.setRequestHeader("Authorization", OPENAI_API_KEY);
+	xhr.setRequestHeader("Authorization", "Bearer " + OPENAI_API_KEY);
 	xhr.onload = () => {
 		let json = JSON.parse(xhr.response)
 		console.log(json.choices[0].text)
