@@ -1,0 +1,20 @@
+{
+	"name" : "Proto-Answers",
+	"version": "1.0",
+	"description": "GPT-3 x Protobowl",
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": [
+				"https://protobowl.com/*"
+			],
+			"js": ["content.js"]
+		}
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+		"https://api.openai.com/v1/completions"
+	]
+}
